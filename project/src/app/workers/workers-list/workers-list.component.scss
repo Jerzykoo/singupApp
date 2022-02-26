@@ -1,0 +1,20 @@
+.worker{
+  display: flex;
+  font-size: 1.3rem;
+  &__name{
+    margin-right: 12px;
+  }
+}
+
+.container{
+  margin: 20px 0 0 20px;
+}
+table {
+  width: 100%;
+}
+
+.button{
+ button{
+   height: 100%;
+ }
+}

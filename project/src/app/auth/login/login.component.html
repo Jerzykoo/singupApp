@@ -1,0 +1,41 @@
+<section class="login">
+<form >
+
+    <mat-form-field appearance="fill">
+      <input
+      matInput
+      type="email"
+      placeholder="Your email"
+      [formControl]="$any(loginFG).controls['email']"
+      >
+      <mat-hint>Please enter a valid emial.</mat-hint>
+      <mat-error>invalid emial</mat-error>
+    </mat-form-field>
+
+
+
+      <mat-form-field appearance="fill">
+        <input
+        type="password"
+        matInput
+        placeholder="Your password"
+        [formControl]="$any(loginFG).controls['password']"
+        >
+        <mat-hint>Please enter your password.</mat-hint>
+        <mat-error>invalid password</mat-error>
+      </mat-form-field>
+
+
+
+  <button type="submit" mat-raised-button color="primary" (click)="onSubmit($event)">Login</button>
+  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
+
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+</form>
+</section>
